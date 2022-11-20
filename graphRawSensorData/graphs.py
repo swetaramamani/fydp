@@ -71,38 +71,29 @@ def plot_2d_graph(csv_file, accelerometer):
     xline, yline, zline, t = get_data(csv_file, accelerometer)
     x_normalized, y_normalized, z_normalized = normalize_data(xline, yline, zline)
 
-    fig, axs = plt.subplots(3, 2)
+    fig, axs = plt.subplots(3)
     if accelerometer:
-        fig.suptitle('Accelerometer Data from ' + csv_file[32:49])
-        axs[0, 0].set_ylabel('X (g)')
-        axs[0, 1].set_ylabel('X (g)')
-        axs[1, 0].set_ylabel('Y (g)')
-        axs[1, 1].set_ylabel('Y (g)')
-        axs[2, 0].set_ylabel('Z (g)')
-        axs[2, 1].set_ylabel('Z (g)')
+        fig.suptitle('Accelerometer Data from Table Test')
+        axs[0].set_ylabel('X (g)')
+        axs[1].set_ylabel('Y (g)')
+        axs[2].set_ylabel('Z (g)')
     else:
-        fig.suptitle('Gyroscope Data from ' + csv_file[31:47])
-        axs[0, 0].set_ylabel('X (deg/s)')
-        axs[0, 1].set_ylabel('X (deg/s)')
-        axs[1, 0].set_ylabel('Y (deg/s)')
-        axs[1, 1].set_ylabel('Y (deg/s)')
-        axs[2, 0].set_ylabel('Z (deg/s)')
-        axs[2, 1].set_ylabel('Z (deg/s)')
+        fig.suptitle('Gyroscope SNR Testing (Hand): Subject 1, Trial 1')
+        axs[0].set_ylabel('X (deg/s)')
+        axs[1].set_ylabel('Y (deg/s)')
+        axs[2].set_ylabel('Z (deg/s)')
 
-    axs[0, 0].plot(t, xline, 'red')
-    axs[0, 1].plot(t, x_normalized, 'red')
-    axs[1, 0].plot(t, yline, 'yellow')
-    axs[1, 1].plot(t, y_normalized, 'yellow')
-    axs[2, 0].plot(t, zline, 'blue')
-    axs[2, 1].plot(t, z_normalized, 'blue')
-    axs[2, 0].set_xlabel('Time (s)')
-    axs[2, 1].set_xlabel('Time (s)')
-    axs[0, 0].grid()
-    axs[0, 1].grid()
-    axs[1, 0].grid()
-    axs[1, 1].grid()
-    axs[2, 0].grid()
-    axs[2, 1].grid()
+    axs[0].plot(t, xline, 'red')
+    axs[1].plot(t, yline, 'green')
+    axs[2].plot(t, zline, 'blue')
+    axs[2].set_xlabel('Time (s)')
+    axs[0].grid()
+    axs[1].grid()
+    axs[2].grid()
+
+    # axs[0].set_ylim(-1.5,1.5)
+    # axs[1].set_ylim(-1.5,1.5)
+    # axs[2].set_ylim(-1.5,1.5)
 
     plt.show()
 
@@ -140,6 +131,33 @@ lodstanding1gyr = '/Users/swetaramamani/Downloads/Elodie_2022-10-28T11.19.16.533
 
 lodstanding2acc = '/Users/swetaramamani/Downloads/Elodie_2022-10-28T11.20.25.215_D8E078ADF8A4_Accelerometer.csv'
 lodstanding2gyr = '/Users/swetaramamani/Downloads/Elodie_2022-10-28T11.20.25.215_D8E078ADF8A4_Gyroscope.csv'
-plot_2d_graph(lodstanding2gyr, accelerometer=False)
+
+forarma = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T16.23.23.435_D8E078ADF8A4_Accelerometer.csv'
+forarmg = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T16.23.23.435_D8E078ADF8A4_Gyroscope.csv'
+
+handa = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T17.17.43.005_D8E078ADF8A4_Accelerometer.csv'
+handg = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T17.17.43.005_D8E078ADF8A4_Gyroscope.csv'
+
+handa1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T17.55.34.013_D8E078ADF8A4_Accelerometer.csv'
+
+tablea = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T16.13.45.876_D8E078ADF8A4_Accelerometer.csv'
+tableg = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T16.13.45.876_D8E078ADF8A4_Gyroscope.csv'
+
+laptopa = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T20.46.31.713_D8E078ADF8A4_Accelerometer.csv'
+laptopg = '/Users/swetaramamani/Downloads/Elodie_2022-11-14T20.46.31.713_D8E078ADF8A4_Gyroscope.csv'
+
+handsweta4beatsa = '/Users/swetaramamani/Downloads/Elodie_2022-11-15T15.53.53.186_D8E078ADF8A4_Accelerometer.csv'
+handsweta4beatsg = '/Users/swetaramamani/Downloads/Elodie_2022-11-15T15.53.53.186_D8E078ADF8A4_Gyroscope.csv'
+
+handsweta4beats2a = '/Users/swetaramamani/Downloads/Elodie_2022-11-15T17.11.37.187_D8E078ADF8A4_Accelerometer.csv'
+handswetabeats2g = '/Users/swetaramamani/Downloads/Elodie_2022-11-15T17.11.37.187_D8E078ADF8A4_Gyroscope.csv'
+
+table100a = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.38.05.023_D8E078ADF8A4_Accelerometer.csv'
+table100g = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.38.05.023_D8E078ADF8A4_Gyroscope.csv'
+
+hand100a = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.44.49.453_D8E078ADF8A4_Accelerometer.csv'
+hand100g = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.44.49.453_D8E078ADF8A4_Gyroscope.csv'
+
+plot_2d_graph(hand100a, accelerometer=True)
 
 

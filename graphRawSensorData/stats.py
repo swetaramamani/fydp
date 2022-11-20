@@ -48,5 +48,9 @@ def print_statistics(csv_file, accelerometer):
     print("Here's the statistical information about movement in the Z direction:")
     print(f"Standard Deviation: {z_stddev}, Variance: {z_variance}, Mean: {z_mean}, Median: {z_median}")
 
+def multiple_files(csv_files):
+    for csv_file in csv_files:
+        print_statistics(csv_file, accelerometer=True)
+
 lodstanding2acc = '/Users/swetaramamani/Downloads/Elodie_2022-10-28T11.20.25.215_D8E078ADF8A4_Accelerometer.csv'
 print_statistics(lodstanding2acc, accelerometer=True)
