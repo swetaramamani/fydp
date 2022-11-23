@@ -73,12 +73,13 @@ def plot_2d_graph(csv_file, accelerometer):
 
     fig, axs = plt.subplots(3)
     if accelerometer:
-        fig.suptitle('Accelerometer Data from Table Test')
+        fig.suptitle('Accelerometer Data for Calibration (Z)')
         axs[0].set_ylabel('X (g)')
         axs[1].set_ylabel('Y (g)')
         axs[2].set_ylabel('Z (g)')
     else:
-        fig.suptitle('Gyroscope SNR Testing (Hand): Subject 1, Trial 1')
+        fig.suptitle('Gyroscope Data from Shoulder Abductions/Adductions')
+        fig.suptitle('Gyroscope Data Verification (45 rpm - X up)')
         axs[0].set_ylabel('X (deg/s)')
         axs[1].set_ylabel('Y (deg/s)')
         axs[2].set_ylabel('Z (deg/s)')
@@ -91,7 +92,7 @@ def plot_2d_graph(csv_file, accelerometer):
     axs[1].grid()
     axs[2].grid()
 
-    # axs[0].set_ylim(-1.5,1.5)
+    axs[0].set_ylim(-270,-290)
     # axs[1].set_ylim(-1.5,1.5)
     # axs[2].set_ylim(-1.5,1.5)
 
@@ -158,6 +159,15 @@ table100g = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.38.05.023_D8E07
 hand100a = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.44.49.453_D8E078ADF8A4_Accelerometer.csv'
 hand100g = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.44.49.453_D8E078ADF8A4_Gyroscope.csv'
 
-plot_2d_graph(hand100a, accelerometer=True)
+handlod1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.01.18.796_D8E078ADF8A4_Gyroscope.csv'
 
+swetaslides = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T16.05.31.293_D8E078ADF8A4_Accelerometer.csv'
+swetaslidesg = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T16.05.31.293_D8E078ADF8A4_Gyroscope.csv'
 
+lody = '/Users/swetaramamani/Downloads/elodiesy.csv'
+lodx = '/Users/swetaramamani/Downloads/elodiex.csv'
+lodz = '/Users/swetaramamani/Downloads/elodiez.csv'
+
+lodgyro = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T16.48.00.458_D8E078ADF8A4_Gyroscope.csv'
+gyrom_calib_x ='/Users/swetaramamani/Downloads/gyrom_calib_y.csv'
+plot_2d_graph(gyrom_calib_x, accelerometer=False)

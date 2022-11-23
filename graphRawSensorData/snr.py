@@ -127,6 +127,11 @@ def plot_2d_graph(csv_file_s, csv_file_n, accelerometer):
     x_snr_max = 10*np.log(x_fft_s[index_max]/x_fft_n[index_max])
     print("SNR at Dominant Frequency for X based on MAX", x_snr_max)
 
+    print("Max value Y", y_fft_s[index_max])
+    print("Dominant Frequency for Y MAX", frequencies[index_max])
+    y_snr_max = 10*np.log(y_fft_s[index_max]/y_fft_n[index_max])
+    print("SNR at Dominant Frequency for X based on MAX", y_snr_max)
+
     index_max = np.argmax(z_fft_s)
     print("Max value Z", z_fft_s[index_max])
     print("Dominant Frequency for Z MAX", frequencies[index_max])
@@ -174,6 +179,41 @@ hand100g2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.53.02.014_D8E07
 
 hand3g = '/Users/swetaramamani/Downloads/Elodie_2022-11-18T10.55.56.792_D8E078ADF8A4_Gyroscope.csv'
 
+handlod1g = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.01.18.796_D8E078ADF8A4_Gyroscope.csv'
+handlod2g = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.08.11.710_D8E078ADF8A4_Gyroscope.csv'
 
+swetahand1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.10.50.703_D8E078ADF8A4_Gyroscope.csv'
 
-plot_2d_graph(hand100g, table100g, accelerometer=False)
+lodhand1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.20.25.776_D8E078ADF8A4_Gyroscope.csv'
+lodhand2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.23.46.024_D8E078ADF8A4_Gyroscope.csv'
+
+lodinarm1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.32.25.980_D8E078ADF8A4_Gyroscope.csv'
+lodinarm2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.36.10.646_D8E078ADF8A4_Gyroscope.csv'
+
+lodforout1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T13.55.22.416_D8E078ADF8A4_Gyroscope.csv'
+lodforout2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.00.07.891_D8E078ADF8A4_Gyroscope.csv'
+
+lodupin1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.08.18.620_D8E078ADF8A4_Gyroscope.csv'
+lodupin2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.11.36.996_D8E078ADF8A4_Gyroscope.csv'
+
+lodoutup1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.20.54.691_D8E078ADF8A4_Gyroscope.csv'
+lodoutup2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.23.44.204_D8E078ADF8A4_Gyroscope.csv'
+
+swetahand2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.30.52.661_D8E078ADF8A4_Gyroscope.csv'
+
+swetainfor1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.34.35.868_D8E078ADF8A4_Gyroscope.csv'
+swetainfor2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.37.15.974_D8E078ADF8A4_Gyroscope.csv'
+
+swetainup1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.41.44.569_D8E078ADF8A4_Gyroscope.csv'
+swetainup2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.44.53.024_D8E078ADF8A4_Gyroscope.csv'
+
+swetaforout1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.49.47.328_D8E078ADF8A4_Gyroscope.csv'
+swetaforout2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.52.31.307_D8E078ADF8A4_Gyroscope.csv'
+
+swetaoutup2 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.56.46.036_D8E078ADF8A4_Gyroscope.csv'
+swetaoutup1 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T14.59.00.851_D8E078ADF8A4_Gyroscope.csv'
+swetaoutup2yes = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T15.04.00.917_D8E078ADF8A4_Gyroscope.csv'
+
+lotupout3 = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T15.08.44.025_D8E078ADF8A4_Gyroscope.csv'
+lodupout = '/Users/swetaramamani/Downloads/Elodie_2022-11-20T15.11.54.198_D8E078ADF8A4_Gyroscope.csv'
+plot_2d_graph(lodupout, table100g, accelerometer=False)
